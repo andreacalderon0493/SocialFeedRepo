@@ -1,6 +1,5 @@
 import "./App.css";
 import Header from "./components/Header/Header";
-import Post from "./components/Post/Post";
 import PostList from "./components/Post/Post";
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Post title="Message Us!" />
+      <PostList />
     </div>
   );
 }

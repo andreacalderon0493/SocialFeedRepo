@@ -1,5 +1,8 @@
 const Post = ({ postObj, title }) => {
   console.log(postObj);
+  const handleClick = (e) => {
+    console.log(e);
+  };
   return (
     <div>
       <h4>{title}</h4>
@@ -11,6 +14,10 @@ const Post = ({ postObj, title }) => {
           <div>
             <span>Post</span>
             <span>{postObj.post}</span>
+          </div>
+          <div>
+            <button onClick={handleClick}>Like</button>
+            <button onClick={handleClick}>Dislike</button>
           </div>
         </div>
       </div>
