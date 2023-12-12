@@ -4,8 +4,17 @@ const CreatePostForm = ({}) => {
   const [name, setName] = useState(" ");
   const [post, setPost] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = {
+      name,
+      post,
+    };
+    console.log(formData);
+  };
+
   return (
-    <form className="flex-item">
+    <form onSubmit={handleSubmit} className="flex-item">
       <h4>Add Message</h4>
       <div>
         <div>
@@ -17,6 +26,7 @@ const CreatePostForm = ({}) => {
           <input value={post} onChange={(e) => setPost(e.target.value)} />
         </div>
       </div>
+      <button type="submit">Create</button>
     </form>
   );
 };
