@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Post.css";
 
-const Post = ({ postObj, title }) => {
+const Post = ({ title }) => {
   const [isLike, setIsLike] = useState(false);
   const [isDislike, setIsDisLike] = useState(false);
   const handleClick = (e) => {
@@ -18,10 +18,10 @@ const Post = ({ postObj, title }) => {
 
       <div>
         <div>
-          <span>Name</span>
+          <span></span>
           <span></span>
           <div>
-            <span>Post</span>
+            <span></span>
             <span></span>
           </div>
           <div>

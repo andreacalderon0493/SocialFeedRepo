@@ -10,7 +10,6 @@ const CreatePostForm = ({}) => {
       name,
       post,
     };
-    console.log(formData);
   };
 
   return (
