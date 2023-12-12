@@ -3,13 +3,15 @@ import "./Post.css";
 
 const Post = ({ postObj, title }) => {
   const [isLike, setIsLike] = useState(false);
-  console.log(isLike);
-  console.log(postObj);
+  const [isDislike, setIsDisLike] = useState(false);
   const handleClick = (e) => {
     setIsLike(!isLike);
   };
+  const handleClicker = (e) => {
+    setIsDisLike(!isDislike);
+  };
   const btnClass = isLike ? "active-btn" : "";
-  const btnClass2 = isLike ? "active-btn-2" : "";
+  const btnClass2 = isDislike ? "active-btn-2" : "";
   return (
     <div>
       <h4>{title}</h4>
@@ -17,17 +19,17 @@ const Post = ({ postObj, title }) => {
       <div>
         <div>
           <span>Name</span>
-          <span>{postObj.name}</span>
+          <span></span>
           <div>
             <span>Post</span>
-            <span>{postObj.post}</span>
+            <span></span>
           </div>
           <div>
             <button className={btnClass} onClick={handleClick}>
               Like
             </button>
-            <button className={btnClass2} onClick={handleClick}>
-              Dislike
+            <button className={btnClass2} onClick={handleClicker}>
+              DisLike
             </button>
           </div>
         </div>
@@ -36,4 +38,4 @@ const Post = ({ postObj, title }) => {
   );
 };
 
-export default PostList;
+export default Post;

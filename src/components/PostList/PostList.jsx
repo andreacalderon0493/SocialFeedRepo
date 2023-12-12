@@ -1,8 +1,8 @@
 import Post from "./components/Post/Post";
 
-const PostList = ({}) => {
+const PostList = ({ post }) => {
   const posts = [];
-  const postItems = posts.map((post) => <Post key={posts} />);
+  const postItems = posts.map((post) => <Post key={(title = "Message Us")} />);
   return (
     <div className="post-list">
       <h4>Messages</h4>

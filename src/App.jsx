@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import PostList from "./components/Post/Post";
-
+import CreatePostForm from "./components/CreatePostForm/CreatePostForm";
 function App() {
   const selectedMessage = {
     name: "Andrea Calderon",
@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <PostList />
+      <CreatePostForm />
     </div>
   );
 }
