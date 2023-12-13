@@ -1,5 +1,9 @@
 header {
-    background-color: darkslateblue;
+    background-color: midnightblue;
     color: white;
+    text-shadow:rgba(0, 0, 0, 0.2) ;
     padding: 10px 50px;
+    gap: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
 }

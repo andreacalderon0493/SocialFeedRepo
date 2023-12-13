@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Post.css";
 
-const Post = ({ title }) => {
+const Post = ({ newPost }) => {
+  console.log(newPost);
   const [isLike, setIsLike] = useState(false);
   const [isDislike, setIsDisLike] = useState(false);
   const handleClick = (e) => {
@@ -13,28 +14,26 @@ const Post = ({ title }) => {
   const btnClass = isLike ? "active-btn" : "";
   const btnClass2 = isDislike ? "active-btn-2" : "";
   return (
-    <div>
-      <h4>{title}</h4>
-
-      <div>
+    newPost && (
+      <div className="post-item">
         <div>
-          <span></span>
-          <span></span>
           <div>
-            <span></span>
-            <span></span>
-          </div>
-          <div>
-            <button className={btnClass} onClick={handleClick}>
-              Like
-            </button>
-            <button className={btnClass2} onClick={handleClicker}>
-              DisLike
-            </button>
+            <div>{newPost.name}</div>
+            <div>
+              <div>{newPost.post}</div>
+            </div>
+            <div className="flex-button">
+              <button className={btnClass} onClick={handleClick}>
+                Like
+              </button>
+              <button className={btnClass2} onClick={handleClicker}>
+                DisLike
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    )
   );
 };
 

@@ -1,9 +1,9 @@
-import Post from "./components/Post/Post";
-
+import Post from "../Post/Post";
 const PostList = ({ posts = [] }) => {
-  const postItems = posts.map((post) => <Post key={(title = "Message Us")} />);
+  const postItems = posts.map((post, i) => <Post key={i} newPost={post} />);
+
   return (
-    <div className="post-list">
+    <div className="flex-item">
       <h4>Messages</h4>
       <div>{postItems}</div>
     </div>
