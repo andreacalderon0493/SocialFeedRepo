@@ -34,7 +34,7 @@ const CreatePostForm = ({ onNewPost }) => {
           />
         </div>
       </div>
-      <div className=" flex-button button-color">
+      <div className=" flex-button button">
         <button type="submit">Create</button>
       </div>
     </form>

@@ -5,12 +5,14 @@
     box-sizing: border-box;
 }
 .flex-container{
-    
-    padding: 20px 50px;
+    display: flex;
+flex-direction: column;   
+ padding: 20px 50px;
     gap:30 px;
-     min-width: 300px;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     /* min-width: 300px; */
+     
     transition: 0.3s;
+    max-width: 600px;
 
 }
 .flex-item {
